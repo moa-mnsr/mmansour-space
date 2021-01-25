@@ -20,10 +20,8 @@
 
 .container {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    max-height: 70px;
-    align-items: start;
+    flex-wrap: nowrap;
   }
 
 .icon {
@@ -46,9 +44,29 @@
   display: block;
 }
 
-body {
-  margin-top: 3%;
-  margin-left: 7%;
+.blob {
+  width:  13em;
+  height: 13em;
+  cursor: pointer;
+}
+
+.expand-link {
+  display: inline-block;
+}
+.expand-link .blob-contract {
+  display: none;
+}
+.expand-link:hover .blob-expand,
+.expand-link:active .blob-expand {
+  display: none;
+}
+.expand-link:hover .blob-contract,
+.expand-link:active .blob-contract {
+  display: block;
+}
+
+body {  
+  margin: 2em 0 2em 3em;;
 }
 
 h1.index {
@@ -80,11 +98,11 @@ h2.page {
 }
 */
 .circle {
-  margin-top: 4%;
+  margin-top: 3em;
 }
 
-.categories {
-  margin-top: 6%;
+nav.categories {
+  margin-top: 2em;
   font-size: 2em;
 }
 
@@ -99,7 +117,6 @@ a.category:hover {
 
 footer {
   margin-top: 3em;
-  margin-bottom: 2em;
 }
 
 a.email {
@@ -170,6 +187,13 @@ ul {
 }
 */
 
+h2.places {
+  list-style: none;
+  text-decoration: underline;
+  margin-bottom: .75em;
+  font-size: 1.2em;
+  font-weight: normal;
+}
 details >summary.group {
   list-style: none;
   text-decoration: underline;
